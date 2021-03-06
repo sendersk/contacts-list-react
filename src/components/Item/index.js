@@ -1,13 +1,16 @@
-import React from 'react'
-import {Wrapper} from "./styled"
+import React from "react";
+import { Wrapper, Avatar, Content, Header, Paragraph } from "./styled";
 
-function Item({avatar, name}) {
-    return (
-        <Wrapper>
-            <img src={avatar} alt="" />
-            <p>{name}</p>
-        </Wrapper>
-    )
+function Item({ avatar, name, email }) {
+  return (
+    <Wrapper>
+      <Avatar src={avatar} alt="" />
+      <Content>
+        <Header>{name}</Header>
+        <Paragraph>{email}</Paragraph>
+      </Content>
+    </Wrapper>
+  );
 }
 
-export default Item
+export default Item;
