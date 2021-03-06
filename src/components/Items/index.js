@@ -26,6 +26,8 @@ function Items() {
       </SearchWrapper>
       {users.map((user) => (
         <Item 
+          key={user.id}
+          avatar={user.avatar}
           name={`${user.first_name}` + " "  +  `${user.last_name}`}
         />
       ))}

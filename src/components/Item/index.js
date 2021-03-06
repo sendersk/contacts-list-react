@@ -1,9 +1,10 @@
 import React from 'react'
 import {Wrapper} from "./styled"
 
-function Item({name}) {
+function Item({avatar, name}) {
     return (
         <Wrapper>
+            <img src={avatar} alt="" />
             <p>{name}</p>
         </Wrapper>
     )
