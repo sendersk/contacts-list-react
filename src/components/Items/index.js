@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { SearchWrapper, SearchInput } from "../Search/styled";
 import Item from "../Item/index"
+import {Wrapper} from "./styled"
 
 function Items() {
   const apiURL =
@@ -19,7 +20,7 @@ function Items() {
   };
 
   return (
-    <div>
+    <Wrapper>
       <SearchWrapper>
         <SearchInput type="text" />
       </SearchWrapper>
@@ -28,7 +29,7 @@ function Items() {
           name={`${user.first_name}` + " "  +  `${user.last_name}`}
         />
       ))}
-    </div>
+    </Wrapper>
   );
 }
 
