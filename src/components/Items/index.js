@@ -28,7 +28,8 @@ function Items() {
         <Item 
           key={user.id}
           avatar={user.avatar}
-          name={`${user.first_name}` + " "  +  `${user.last_name}`}
+          name={user.first_name + " " + user.last_name}
+          email={user.email}
         />
       ))}
     </Wrapper>
