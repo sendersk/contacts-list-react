@@ -1,14 +1,15 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
-    html {
+    * {
         box-sizing: border-box;
-        padding: 0;
-        margin: 0;
     }
-
-    *, ::after, ::before {
+    ::after, ::before {
         box-sizing: inherit;
+    }
+    body {
         font-family: "Montserrat", sans-serif;
+        margin: 0;
+        padding: 0;
     }
 `;
