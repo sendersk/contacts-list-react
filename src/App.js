@@ -1,10 +1,13 @@
 import React from 'react'
-import Navigation from "./components/Navigation/index"
+import Banner from "./components/Banner/index"
+import Items from "./components/Items/index"
 
 function App() {
+
   return (
     <div>
-      <Navigation />
+      <Banner />
+      <Items />
     </div>
   );
 }
