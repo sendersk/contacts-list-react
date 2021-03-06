@@ -1,10 +1,11 @@
 import React from 'react'
+import {Wrapper} from "./styled"
 
 function Item({name}) {
     return (
-        <div>
+        <Wrapper>
             <p>{name}</p>
-        </div>
+        </Wrapper>
     )
 }
 
