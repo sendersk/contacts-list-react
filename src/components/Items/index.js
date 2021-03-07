@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { SearchWrapper, SearchInput } from "../Search/styled";
-import Item from "../Item/index"
-import {Wrapper} from "./styled"
+import Item from "../Item/index";
+import { Wrapper } from "./styled";
 
 function Items() {
   const apiURL =
     "https://teacode-recruitment-challenge.s3.eu-central-1.amazonaws.com/users.json";
 
   const [users, setUsers] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     getItems();
@@ -22,16 +23,34 @@ function Items() {
   return (
     <Wrapper>
       <SearchWrapper>
-        <SearchInput type="text" />
-      </SearchWrapper>
-      {users.map((user) => (
-        <Item 
-          key={user.id}
-          avatar={user.avatar}
-          name={user.first_name + " " + user.last_name}
-          email={user.email}
+        <SearchInput
+          type="text"
+          onChange={(e) => {
+            setSearchTerm(e.target.value);
+          }}
         />
-      ))}
+      </SearchWrapper>
+      {users
+        .filter((user) => {
+          if (searchTerm === "") {
+            return user;
+          } else if (
+            user.first_name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            user.last_name.toLowerCase().includes(searchTerm.toLowerCase())
+          ) {
+            return user;
+          } else {
+            return 0;
+          }
+        })
+        .map((user) => (
+          <Item
+            key={user.id}
+            avatar={user.avatar}
+            name={user.first_name + " " + user.last_name}
+            email={user.email}
+          />
+        ))}
     </Wrapper>
   );
 }
