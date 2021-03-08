@@ -31,6 +31,7 @@ function Items() {
         />
       </SearchWrapper>
       {users
+        .sort((a, b) => a.last_name.localeCompare(b.last_name))
         .filter((user) => {
           if (searchTerm === "") {
             return user;
