@@ -1,7 +1,14 @@
 import React from "react";
-import { Wrapper, Avatar, Content, Header, Paragraph } from "./styled";
+import {
+  Wrapper,
+  Avatar,
+  Content,
+  Header,
+  Paragraph,
+  ToggleButton,
+} from "./styled";
 
-function Item({ avatar, name, email }) {
+function Item({ avatar, name, email, triggerToggle }) {
   return (
     <Wrapper>
       <Avatar src={avatar} alt="" />
@@ -9,6 +16,7 @@ function Item({ avatar, name, email }) {
         <Header>{name}</Header>
         <Paragraph>{email}</Paragraph>
       </Content>
+      <ToggleButton type="checkbox" onChange={triggerToggle} />
     </Wrapper>
   );
 }
