@@ -32,3 +32,7 @@ export const Paragraph = styled.p`
   font-size: 14px;
   margin: 0px;
 `;
+
+export const ToggleButton = styled.input`
+    margin-right: 6vw;
+`
