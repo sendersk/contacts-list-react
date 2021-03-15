@@ -54,6 +54,9 @@ function Items() {
             email={user.email}
             triggerToggle={() => {
               setToggle(!toggle);
+              if (toggle === true) {
+                console.log(user.id)
+              } 
             }}
           />
         ))}
