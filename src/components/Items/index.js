@@ -9,6 +9,7 @@ function Items() {
 
   const [users, setUsers] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const [toggle, setToggle] = useState(true);
 
   useEffect(() => {
     getItems();
@@ -28,6 +29,7 @@ function Items() {
           onChange={(e) => {
             setSearchTerm(e.target.value);
           }}
+          placeholder="Search..."
         />
       </SearchWrapper>
       {users
@@ -50,6 +52,9 @@ function Items() {
             avatar={user.avatar}
             name={user.first_name + " " + user.last_name}
             email={user.email}
+            triggerToggle={() => {
+              setToggle(!toggle);
+            }}
           />
         ))}
     </Wrapper>
