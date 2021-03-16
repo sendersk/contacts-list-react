@@ -5,6 +5,7 @@ import {
   Content,
   Header,
   Paragraph,
+  ToggleContainer,
   ToggleButton,
 } from "./styled";
 
@@ -16,7 +17,9 @@ function Item({ avatar, name, email, triggerToggle }) {
         <Header>{name}</Header>
         <Paragraph>{email}</Paragraph>
       </Content>
-      <ToggleButton type="checkbox" onChange={triggerToggle} />
+      <ToggleContainer>
+        <ToggleButton type="checkbox" onChange={triggerToggle} />
+      </ToggleContainer>
     </Wrapper>
   );
 }

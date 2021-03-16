@@ -33,6 +33,16 @@ export const Paragraph = styled.p`
   margin: 0px;
 `;
 
+export const ToggleContainer = styled.div`
+  width: 50px;
+  height: 24px;
+  padding: 0;
+  margin-right: 6vw;
+  border-radius: 30px;
+  background-color: #4d4d4d;
+  transition: all .2s ease;
+`
+
 export const ToggleButton = styled.input`
-    margin-right: 6vw;
+    
 `
