@@ -7,6 +7,7 @@ import {
   Paragraph,
   ToggleContainer,
   ToggleButton,
+  Span,
 } from "./styled";
 
 function Item({ avatar, name, email, triggerToggle }) {
@@ -19,6 +20,7 @@ function Item({ avatar, name, email, triggerToggle }) {
       </Content>
       <ToggleContainer>
         <ToggleButton type="checkbox" onChange={triggerToggle} />
+        <Span />
       </ToggleContainer>
     </Wrapper>
   );
