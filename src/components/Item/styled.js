@@ -33,16 +33,48 @@ export const Paragraph = styled.p`
   margin: 0px;
 `;
 
-export const ToggleContainer = styled.div`
-  width: 50px;
-  height: 24px;
-  padding: 0;
-  margin-right: 6vw;
-  border-radius: 30px;
-  background-color: #4d4d4d;
-  transition: all .2s ease;
-`
+export const ToggleContainer = styled.label`
+  position: relative;
+  margin-right: 30px;
+`;
 
 export const ToggleButton = styled.input`
-    
-`
+  position: absolute;
+
+  &:checked + span {
+    background-color: #1890ff;
+
+    &:before {
+      left: calc(100% - 2px);
+      transform: translateX(-100%);
+    }
+  }
+`;
+
+export const Span = styled.span`
+  display: flex;
+  cursor: pointer;
+  width: 50px;
+  height: 25px;
+  border-radius: 100px;
+  background-color: #999;
+  position: relative;
+  transition: background-color 0.2s;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 21px;
+    height: 21px;
+    border-radius: 45px;
+    transition: 0.2s;
+    background: #fff;
+    box-shadow: 0 2px 4px 0 rgba(0, 35, 11, 0.2);
+  }
+
+  &:active:before{
+    width: 28px;
+  }
+`;
