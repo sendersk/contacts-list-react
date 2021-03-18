@@ -42,7 +42,7 @@ export const ToggleButton = styled.input`
   position: absolute;
 
   &:checked + span {
-    background-color: #1890ff;
+    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
 
     &:before {
       left: calc(100% - 2px);
