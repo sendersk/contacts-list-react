@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const SearchWrapper = styled.div`
   display: flex;
   height: 7vh;
-  background-color: #000;
+  background-color: ${({theme}) => theme.color.black};
 `;
 
 export const SearchInput = styled.input`

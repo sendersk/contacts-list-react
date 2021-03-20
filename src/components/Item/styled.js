@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   align-items: center;
   width: 100vw;
   height: 10vh;
-  border-bottom: 2px solid #aaa;
+  border-bottom: 2px solid ${({theme}) => theme.color.silverChalice};
   padding: 5px;
 `;
 
@@ -13,7 +13,7 @@ export const Avatar = styled.img`
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 2px solid #aaa;
+  border: 2px solid ${({theme}) => theme.color.silverChalice};
 `;
 
 export const Content = styled.div`
@@ -57,7 +57,7 @@ export const Span = styled.span`
   width: 50px;
   height: 25px;
   border-radius: 100px;
-  background-color: #999;
+  background-color: ${({theme}) => theme.color.dustyGray};
   position: relative;
   transition: background-color 0.2s;
 
@@ -70,7 +70,7 @@ export const Span = styled.span`
     height: 21px;
     border-radius: 45px;
     transition: 0.2s;
-    background: #fff;
+    background: ${({theme}) => theme.color.white};
     box-shadow: 0 2px 4px 0 rgba(0, 35, 11, 0.2);
   }
 
