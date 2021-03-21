@@ -1,6 +1,31 @@
 # Contacts List React
 
+## Table of contents
+
+- [DEMO](#demo)
+- [Tech Stack](#tech-stack)
+- [Available Scripts](#available-scripts)
+  - [npm start](#npm-start)
+  - [npm run build](#npm-run-build)
+  - [npm run eject](#npm-run-eject)
+
+
+## DEMO
+
+https://sendersk.github.io/contacts-list-react/
+ 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Tech Stack
+
+- React
+- create-react-app
+- Hooks
+- Styled Components
+- Javascript ES6+
+- HTML
+- CSS
+- npm
 
 ## Available Scripts
 
